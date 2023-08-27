@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Style add-ons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+
+      body {
+          font-family: 'Lato';font-size: 26px;
+      }
+      body{
+        background-color: rgb({{ background_color[0] }}, {{ background_color[1] }}, {{ background_color[2] }});
+      }
+       h1 {margin-bottom: -0.7em;  margin-top: 0em; margin-left: 15px;}
+       h4 {margin-left: 15px;}
+       h5 {margin-left: 15px}
+       h6 {margin-bottom: -0.5em; margin-top: -0.5em; margin-left: 15px;}
+       p {margin-bottom: -0.5em; margin-left: 20px; style ="font-size: 15px;"}
+       input[type="radio"] {margin-left:20px;}
+       input[type="radio"] {margin-bottom: -1em;}
+       input[type="radio"] {margin-top: -1em;}
+       label[for="dropdown2"] {margin-bottom: -1em; margin-top: -1em; margin-left: 20px;}
+       button[type="button"] {margin-left: 20px;}
+       select {margin-left:20px; margin-top: -1em; margin-bottom: -1em}
+    </style>
+
+    <!--Webpage Icon-->
+    <title>CRED</title>
+    <link rel="shortcut icon" type="image/x-icon" href="C.ico" />
+
+
+
+    <!-- Headers -->
+    <section
+      style = "background-color: #44bba4; color: #ffffff">
+
+    <h1 style="font-family: lato"><strong>CRED</strong></h1>
+    <h5 style="font-family: lato">Plan Your Future</h5>
+    </section>
+  </head>
+
+  <body>
+    
+    <!-- Smaller headers-->
+    <h6>Browse Ontario Universities' Programs</h6>
+
+    <p style="font-size: 15px">Select your grade:</p>
+
+    <!-- dropdowns - Grade -->
+    <select name ="grade" id = "grade"> 
+      <option grade = "grade11" >Grade 11</option>
+      <option grade = "grade12" >Grade 12</option>
+
+    </select>
+
+    <p style="font-size: 18px">Which subject(s) are you best at? :</p>
+    <p style="font-size: 15px">Subject 1:</p>
+
+
+    <!-- dropdowns for subjects-->
+    <!--number 1-->
+    <form action="/process_form" method="POST">
+      <select id="dropdown1" name="selected_option1">
+        {% for option in options1 %}
+        <option value="{{ option.value }}">{{ option.label }}</option>
+        {% endfor %}
+      </select>
+    <br>
+  
+    <!--number 2-->
+    <label for="dropdown2" style="font-size: 15px">Subject 2:</label><br>
+    <form action="/process_form" method="POST">
+      <select id="dropdown2" name="selected_option2">
+        {% for option in options2 %}
+        <option value="{{ option.value }}">{{ option.label }}</option>
+        {% endfor %}
+      </select>
+      
+      <!-- button-->
+      <button
+        type="submit"
+        style="background-color: #44bba4"
+        style="color: black"
+        style="font-weight: bold"
+      >
+        <b>Submit</b>
+      </button>
+    </form>
+  </body>
+</html>

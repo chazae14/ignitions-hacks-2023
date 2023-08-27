@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRED</title>
+    <!-- Style add-ons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+
+      body {
+          font-family: 'Lato';font-size: 26px;
+
+      }
+      body {
+            background-color: rgb({{ background_color[0] }}, {{ background_color[1] }}, {{ background_color[2] }});
+      }
+       h1 {margin-bottom: -0.7em;  margin-top: 0em; margin-left: 15px;}
+       h4 {margin-left: 15px;}
+       h5 {margin-left: 15px}
+       h6 {margin-bottom: -0.5em; margin-top: -0.5em; margin-left: 15px;}
+       p {margin-bottom: -0.1em; margin-left: 15px; style="font-size: 15px;"}
+       input[type="radio"] {margin-left: 20px;}
+       input[type="radio"] {margin-bottom: -1em;}
+       input[type="radio"] {margin-top: -1em;}
+       label {margin-bottom: -1em; margin-top: -1em;}
+       button[type="button"] {margin-left: 20px;}
+    </style>
+
+    <title>CRED</title>
+  </head>
+  <body style="background-color: rgb(211, 208, 206)">
+    <!-- Headers -->
+
+    <section style="background-color: #44bba4; color: #ffffff">
+      <h1 style="font-family: lato"><strong>CRED</strong></h1>
+      <h5 style="font-family: lato">Plan Your Future</h5>
+    </section>
+
+    <h6><strong>SUGGESTED PROGRAMS:</strong></h6>
+    <p style="font-size: 17px">Suggestion 1: <i>{{ suggestion }}</i></p>
+    <p style="font-size: 14px">- Required credits: {{ req1 }}</p>
+    <p style="font-size: 14px">- Minimum average required: {{ gr1 }}</p>
+
+    <p style="font-size: 17px">Suggestion 2: <i>{{ suggestion2 }}</i></p>
+    <p style="font-size: 14px">- Required credits: {{ req2 }}</p>
+    <p style="font-size: 14px">- Minimum average required: {{ gr2 }}</p>
+
+    <p style="font-size: 17px">Suggestion 3: <i>{{ suggestion3 }}</i></p>
+    <p style="font-size: 14px">- Required credits: {{ req3 }}</p>
+    <p style="font-size: 14px">- Minimum average required: {{ gr3 }}</p>
+  </body>
+</html>
